@@ -23,10 +23,10 @@ Hardware requirement:
 4. MG996R servo 6v      1
 5. MG90S  servo 5v      1
 
-circuit connection:
+Circuit connection:
 ![circuit](https://github.com/InValid202/rr_robot/assets/125998503/14724ada-29ed-48fb-894d-8f6f49163eba)
 
-assembly robot preview:
+Assembly robot preview:
 ![assembly](https://github.com/InValid202/rr_robot/assets/125998503/4755fe8c-5e7e-4a92-b16d-498a22362662)
 
 
@@ -82,7 +82,7 @@ Ros can't find my package:
 
 
 Port's permission error:
-1. can't upload code from arduino IDE or with rosserial, you can use this coomand to give a permission for a port:
+1. can't upload code from arduino IDE or with rosserial, you can use this command to give a permission for a port:
 
             sudo chmod a+rw {your port that conected with arduino}
 
