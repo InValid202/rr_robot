@@ -18,25 +18,25 @@ Hardware requirement:
 Step to install:
 1. go into SRC file of your ROS workspace with this command:
 
-cd {your catkin workspace}/src
+      cd {your catkin workspace}/src
    
    example: cd catkin_ws/src
    
 3. clone my rr_robot repository to your current file in terminal with this command:
    
-git clone git@github.com:InValid202/rr_robot.git
+      git clone git@github.com:InValid202/rr_robot.git
 
 4. go back from src to catkin workspace with this command in terminal:
 
-cd ..
+      cd ..
    
 5. use this command in your current folder in terminal:
 
-catkin_make
+      catkin_make
 
 6. launch a launch file in rr_robot package with your port that connect with your Arduino:
 
-roslaunch rr_robot rr_robot.launch port:="/dev/ttyUSB0"
+      roslaunch rr_robot rr_robot.launch port:="/dev/ttyUSB0"
 
 7. 
 
