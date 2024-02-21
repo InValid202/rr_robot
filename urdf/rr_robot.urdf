@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<robot name="robot_arm">
+
+    <!-- base link -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/BaseNew.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.15 -0.15 0" rpy="0 0 0"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/BaseNew.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.15 -0.15 0" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- support -->
+    <link name="support">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/support-base.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="white"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/support-base.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- support-->
+    <joint name="support" type="fixed">
+        <parent link="base_link"/>
+        <child link="support"/>
+        <origin xyz="-0.15 -0.15 0.23" rpy="0 0 0"/>
+    </joint>
+    
+    
+        <!-- support2 -->
+    <link name="support2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/support-base.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="white"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/support-base.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- support2-->
+    <joint name="support2" type="fixed">
+        <parent link="support"/>
+        <child link="support2"/>
+        <origin xyz="0 0 0.009" rpy="0 0 0"/>
+    </joint>
+
+    <!-- link 1 -->
+    <link name="link1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/Base-upper.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.15 -0.15 -0.16" rpy="0 0 0"/>
+            <material name="black"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/Base-upper.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.15 -0.15 -0.16" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="1 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- joint1 -->
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0 0 0.259" rpy="0 3.14 0"/>
+        <axis xyz="0 0 -1"/>
+        <limit lower="-1.57" upper="1.57" effort="100" velocity="1"/>
+    </joint>
+
+    <!-- servo1 -->
+    <link name="servo1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/MG996R_servo_1.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="0.065 -0.105 0.12" rpy="0 0 0"/>
+            <material name="white"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/MG996R_servo_1.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="0.065 -0.105 0.12" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- servo1-->
+    <joint name="servo1" type="fixed">
+        <parent link="base_link"/>
+        <child link="servo1"/>
+        <origin xyz="-0.15 -0.15 0.239" rpy="1.5708 0 1.5708"/>
+    </joint>
+    
+        <!-- servo2 -->
+    <link name="servo2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/MG90s.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.075 -0.0175 -0.03" rpy="0 0 0"/>
+         
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/MG90s.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.075 -0.0175 -0.03" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="1 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- servo2 -->
+    <joint name="servo2" type="fixed">
+        <parent link="link1"/>
+        <child link="servo2"/>
+        <origin xyz="0 0 -0.109" rpy="1.57 1.57 1.57"/>
+        <axis xyz="0 0 -1"/>
+        <limit lower="-1.57" upper="1.57" effort="100" velocity="1"/>
+    </joint>
+
+    <!-- link 2 -->
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/servo-arm.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.015 0.07 -0.11" rpy="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="package://rr_robot/urdf/robot_model/servo-arm.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <origin xyz="-0.015 0.07 -0.11" rpy="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <origin xyz="1 0 0" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <!-- joint2 -->
+    <joint name="joint2" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="-0.015 0 -0.095" rpy="0 0 -1.57"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="100" velocity="1"/>
+    </joint>
+
+    <!-- Material for color -->
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+    <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+    </material>
+        <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+    
+
+</robot>

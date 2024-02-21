@@ -1,0 +1,20 @@
+<launch>
+	<arg name="port" default="/dev/ttyUSB0" />
+	<arg name="model" default="$(find rr_robot)/urdf/rr_robot.urdf"/>
+	<arg name="gui" default="false" />
+	<arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
+	
+	<param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+	
+	
+	<node name="Remote" pkg="rr_robot" type="remote_gui_realtime.py" output="screen"/>
+
+	
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+	
+	<node name="rosserial_node" pkg="rosserial_arduino" type="serial_node.py" output="screen">
+		<param name="port" value="$(arg port)" />
+	</node>
+	
+</launch>
