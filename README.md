@@ -16,7 +16,7 @@ Hardware requirement:
 5. MG90S  servo 5v      1
 
 Step to install:
-1. go into SRC file of your ROS workspace with this command:
+1. go into src file of your ROS workspace with this command:
 
             cd {your catkin workspace}/src
    
@@ -34,11 +34,19 @@ Step to install:
 
             catkin_make
 
-6. launch a launch file in rr_robot package with your port that connect with your Arduino:
+6. go to src file of rr_robot package and add permission to execute gui python file:
 
-            roslaunch rr_robot rr_robot.launch port:="/dev/ttyUSB0"
+            cd src/rr_robot/src
 
-7. 
+7. add permission to execute gui python file
 
-   
+            chmod +x remote_gui_realtime.py
+
+8. launch a launch file in rr_robot package with your port that connect with your Arduino (you can check port in your Arduino IDE):
+
+            roslaunch rr_robot rr_robot.launch port:="{Your port}"
+
+   example: roslaunch rr_robot rr_robot.launch port:="dev/ttyUSB0"
+
+
             
