@@ -65,7 +65,7 @@ Step to install:
 
 
 Ros can't find my package:
-1. Ros can't find a rr_robot package even thought you catkin_make and follow all 8 installation step above.
+1. Ros can't find a rr_robot package even thought you used catkin_make command and followed all 8 installation step above.
    solution. first, go back to home in terminal with this command:
 
             cd
