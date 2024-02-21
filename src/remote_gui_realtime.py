@@ -9,9 +9,6 @@ from std_srvs.srv import Trigger
 from sensor_msgs.msg import JointState
 from math import pi
 
-from PIL import Image
-
-
 root  = Tk()
 root.title("RR Robot remote")
 root.geometry("900x400")
