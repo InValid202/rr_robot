@@ -30,33 +30,33 @@ assembly robot preview:
 Step to install:
 1. go into src file of your ROS workspace with this command:
 
-cd {your catkin workspace}/src
+      cd {your catkin workspace}/src
    
-   example: cd catkin_ws/src
+      example: cd catkin_ws/src
    
 3. clone my rr_robot repository to your current file in terminal with this command:
    
-git clone https://github.com/InValid202/rr_robot.git
+      git clone https://github.com/InValid202/rr_robot.git
 
 4. go back from src to catkin workspace with this command in terminal:
 
-cd ..
+      cd ..
    
 5. use this command in your current folder in terminal:
 
-catkin_make
+      catkin_make
 
 6. go to src file of rr_robot package and add permission to execute gui python file:
 
-cd src/rr_robot/src
+      cd src/rr_robot/src
 
 7. add permission to execute gui python file
 
-chmod +x remote_gui_realtime.py
+      chmod +x remote_gui_realtime.py
 
 8. launch a launch file in rr_robot package with your port that connect with your Arduino (you can check port in your Arduino IDE):
 
-roslaunch rr_robot rr_robot.launch port:="{Your port}"
+      roslaunch rr_robot rr_robot.launch port:="{Your port}"
 
 example: roslaunch rr_robot rr_robot.launch port:="dev/ttyUSB0"
 
@@ -64,21 +64,21 @@ Ros can't find my package:
 1. Ros can't find a rr_robot package even thought you catkin_make and follow all 8 installation step above.
    solution. first, go back to home in terminal with this command:
 
-cd
+      cd
    
 2. edit .bashrc file with this command:
 
-gedit .bashrc
+      gedit .bashrc
 
 3. scroll down to bottom of the .bashrc file add this command to .bashrc:
 
-source ~/{Your ros workspace}/devel/setup.bash
+      source ~/{Your ros workspace}/devel/setup.bash
 
-example: source ~/catkin_ws/devel/setup.bash
+      example: source ~/catkin_ws/devel/setup.bash
 
 Port's permission error:
 1. can't upload code from arduino IDE or with rosserial, you can use this coomand to give a permission for a port:
 
-sudo chmod a+rw {your port that conected with arduino}
+      sudo chmod a+rw {your port that conected with arduino}
 
-example: sudo chmod a+rw /dev/ttyUSB0
+      example: sudo chmod a+rw /dev/ttyUSB0
