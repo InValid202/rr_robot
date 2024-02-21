@@ -12,7 +12,7 @@ source material:
 
 1. Ubuntu 20.04 installation: https://www.youtube.com/watch?v=BnV23ZEI34w
 2. ROS Noetic installation: https://www.youtube.com/watch?v=ZA7u2XPmnlo
-3. arduino installation tutorial : https://www.youtube.com/watch?v=QTK1g0P8OUM&list=PLVZDfM16Af8nOa5SLcIAcPFzIGaJhaRgs&index=6&t=5875s
+3. Arduino installation tutorial : https://www.youtube.com/watch?v=QTK1g0P8OUM&list=PLVZDfM16Af8nOa5SLcIAcPFzIGaJhaRgs&index=6&t=5875s
 
 Hardware requirement:
 1. Arduino UNO R3       1 
