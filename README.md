@@ -76,7 +76,7 @@ Ros can't find my package:
 
 3. scroll down to bottom of the .bashrc file add this command to .bashrc:
 
-            source ~/{Your ros workspace}/devel/setup.bash
+            source ~/{Your ROS workspace}/devel/setup.bash
 
       example: source ~/catkin_ws/devel/setup.bash
 
@@ -84,6 +84,6 @@ Ros can't find my package:
 Port's permission error:
 1. can't upload code from arduino IDE or run rosserial, you can use this command to give a permission for a port:
 
-            sudo chmod a+rw {your port that conected with arduino}
+            sudo chmod a+rw {your port that connected with arduino}
 
       example: sudo chmod a+rw /dev/ttyUSB0
