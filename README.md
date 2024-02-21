@@ -24,7 +24,7 @@ Step to install:
    
 3. clone my rr_robot repository to your current file in terminal with this command:
    
-            git clone git@github.com:InValid202/rr_robot.git
+            git clone https://github.com/InValid202/rr_robot.git
 
 4. go back from src to catkin workspace with this command in terminal:
 
