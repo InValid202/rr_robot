@@ -8,6 +8,7 @@
                 <mesh filename="package://rr_robot/urdf/robot_model/BaseNew.stl" scale="0.003 0.003 0.003"/>
             </geometry>
             <origin xyz="-0.15 -0.15 0" rpy="0 0 0"/>
+            <material name="gray"/>
         </visual>
 
         <collision>
@@ -94,7 +95,7 @@
                 <mesh filename="package://rr_robot/urdf/robot_model/Base-upper.stl" scale="0.003 0.003 0.003"/>
             </geometry>
             <origin xyz="-0.15 -0.15 -0.16" rpy="0 0 0"/>
-            <material name="black"/>
+            <material name="gray"/>
         </visual>
 
         <collision>
@@ -127,7 +128,6 @@
                 <mesh filename="package://rr_robot/urdf/robot_model/MG996R_servo_1.stl" scale="0.003 0.003 0.003"/>
             </geometry>
             <origin xyz="0.065 -0.105 0.12" rpy="0 0 0"/>
-            <material name="white"/>
         </visual>
 
         <collision>
@@ -190,7 +190,7 @@
             <geometry>
                 <mesh filename="package://rr_robot/urdf/robot_model/servo-arm.stl" scale="0.003 0.003 0.003"/>
             </geometry>
-            <origin xyz="-0.015 0.07 -0.11" rpy="0 0 0"/>
+            <origin xyz="-0.015 0.08 -0.11" rpy="0 0 0"/>
             <material name="gray"/>
         </visual>
 
@@ -198,7 +198,7 @@
             <geometry>
                 <mesh filename="package://rr_robot/urdf/robot_model/servo-arm.stl" scale="0.003 0.003 0.003"/>
             </geometry>
-            <origin xyz="-0.015 0.07 -0.11" rpy="0 0 0"/>
+            <origin xyz="-0.015 0.08 -0.11" rpy="0 0 0"/>
         </collision>
 
         <inertial>
