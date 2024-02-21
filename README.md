@@ -64,21 +64,21 @@ Ros can't find my package:
 1. Ros can't find a rr_robot package even thought you catkin_make and follow all 8 installation step above.
    solution. first, go back to home in terminal with this command:
 
-               cd
+            cd
    
 2. edit .bashrc file with this command:
 
-               gedit .bashrc
+            gedit .bashrc
 
 3. scroll down to bottom of the .bashrc file add this command to .bashrc:
 
-               source ~/{Your ros workspace}/devel/setup.bash
+            source ~/{Your ros workspace}/devel/setup.bash
 
    example: source ~/catkin_ws/devel/setup.bash
 
 Port's permission error:
 1. can't upload code from arduino IDE or with rosserial, you can use this coomand to give a permission for a port:
 
-               sudo chmod a+rw {your port that conected with arduino}
+            sudo chmod a+rw {your port that conected with arduino}
 
    example: sudo chmod a+rw /dev/ttyUSB0
