@@ -1,5 +1,6 @@
 # rr_robot
 
+
 Software requirement:
 1. Ubuntu 20.04  
 2. ROS Noetic
@@ -8,11 +9,12 @@ Software requirement:
 5. Python3
 6. Tkinter GUI python library
 
-Source material:
 
+Source material:
 1. Ubuntu 20.04 installation: https://www.youtube.com/watch?v=BnV23ZEI34w
 2. ROS Noetic installation: https://www.youtube.com/watch?v=ZA7u2XPmnlo
 3. Arduino installation tutorial : https://www.youtube.com/watch?v=QTK1g0P8OUM&list=PLVZDfM16Af8nOa5SLcIAcPFzIGaJhaRgs&index=6&t=5875s
+
 
 Hardware requirement:
 1. Arduino UNO R3       1 
@@ -26,6 +28,7 @@ circuit connection:
 
 assembly robot preview:
 ![assembly](https://github.com/InValid202/rr_robot/assets/125998503/4755fe8c-5e7e-4a92-b16d-498a22362662)
+
 
 Step to install:
 1. go into src file of your ROS workspace with this command:
@@ -60,6 +63,7 @@ Step to install:
 
 example: roslaunch rr_robot rr_robot.launch port:="dev/ttyUSB0"
 
+
 Ros can't find my package:
 1. Ros can't find a rr_robot package even thought you catkin_make and follow all 8 installation step above.
    solution. first, go back to home in terminal with this command:
@@ -75,6 +79,7 @@ Ros can't find my package:
             source ~/{Your ros workspace}/devel/setup.bash
 
       example: source ~/catkin_ws/devel/setup.bash
+
 
 Port's permission error:
 1. can't upload code from arduino IDE or with rosserial, you can use this coomand to give a permission for a port:
