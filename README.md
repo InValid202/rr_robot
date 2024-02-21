@@ -82,7 +82,7 @@ Ros can't find my package:
 
 
 Port's permission error:
-1. can't upload code from arduino IDE or with rosserial, you can use this command to give a permission for a port:
+1. can't upload code from arduino IDE or run rosserial, you can use this command to give a permission for a port:
 
             sudo chmod a+rw {your port that conected with arduino}
 
