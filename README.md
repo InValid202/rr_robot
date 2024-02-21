@@ -31,7 +31,7 @@ Assembly robot preview:
 
 
 Step to install:
-1. go into src file of your ROS workspace with this command:
+1. open terminal and go into src file of your ROS workspace with this command:
 
             cd {your catkin workspace}/src
    
@@ -49,7 +49,7 @@ Step to install:
 
             catkin_make
 
-6. go to src file of rr_robot package and add permission to execute gui python file:
+6. go to src file of rr_robot package and add permission to execute GUI python file:
 
             cd src/rr_robot/src
 
