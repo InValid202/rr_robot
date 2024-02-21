@@ -61,7 +61,7 @@ Step to install:
 
             roslaunch rr_robot rr_robot.launch port:="{Your port}"
 
-example: roslaunch rr_robot rr_robot.launch port:="dev/ttyUSB0"
+      example: roslaunch rr_robot rr_robot.launch port:="dev/ttyUSB0"
 
 
 Ros can't find my package:
