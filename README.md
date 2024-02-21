@@ -38,7 +38,7 @@ Step to install:
 
             roslaunch rr_robot rr_robot.launch port:="/dev/ttyUSB0"
 
-
+7. 
 
    
             
